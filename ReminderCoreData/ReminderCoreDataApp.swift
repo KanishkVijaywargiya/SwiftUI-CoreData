@@ -13,8 +13,9 @@ struct ReminderCoreDataApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            CategoryListView()
+                .environmentObject(ReminderViewModel(context: persistenceController.container.viewContext))
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

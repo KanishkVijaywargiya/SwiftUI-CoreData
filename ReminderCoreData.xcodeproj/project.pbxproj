@@ -13,6 +13,17 @@
 		043D08582754AB7D00EB7BA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043D08572754AB7D00EB7BA3 /* Preview Assets.xcassets */; };
 		043D085A2754AB7D00EB7BA3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D08592754AB7D00EB7BA3 /* Persistence.swift */; };
 		043D085D2754AB7D00EB7BA3 /* ReminderCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 043D085B2754AB7D00EB7BA3 /* ReminderCoreData.xcdatamodeld */; };
+		043D086F2754B28800EB7BA3 /* ReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D086E2754B28800EB7BA3 /* ReminderViewModel.swift */; };
+		049F8CC927588B0400C448E2 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F8CC827588B0400C448E2 /* CategoryListView.swift */; };
+		049F8CCB27588DE700C448E2 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F8CCA27588DE700C448E2 /* AlertView.swift */; };
+		049F8CD827589BA300C448E2 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F8CD427589BA300C448E2 /* Category+CoreDataClass.swift */; };
+		049F8CD927589BA300C448E2 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F8CD527589BA300C448E2 /* Category+CoreDataProperties.swift */; };
+		049F8CDA27589BA300C448E2 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F8CD627589BA300C448E2 /* Item+CoreDataClass.swift */; };
+		049F8CDB27589BA300C448E2 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F8CD727589BA300C448E2 /* Item+CoreDataProperties.swift */; };
+		04F7C10C275B72B20023B427 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7C10B275B72B20023B427 /* ItemListView.swift */; };
+		04F7C10E275B7B560023B427 /* ItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7C10D275B7B560023B427 /* ItemCellViewModel.swift */; };
+		04F7C110275B7D130023B427 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7C10F275B7D130023B427 /* ItemCell.swift */; };
+		04F7C113275B83CB0023B427 /* AwesomeToast in Frameworks */ = {isa = PBXBuildFile; productRef = 04F7C112275B83CB0023B427 /* AwesomeToast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +34,16 @@
 		043D08572754AB7D00EB7BA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		043D08592754AB7D00EB7BA3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		043D085C2754AB7D00EB7BA3 /* ReminderCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReminderCoreData.xcdatamodel; sourceTree = "<group>"; };
+		043D086E2754B28800EB7BA3 /* ReminderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewModel.swift; sourceTree = "<group>"; };
+		049F8CC827588B0400C448E2 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
+		049F8CCA27588DE700C448E2 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		049F8CD427589BA300C448E2 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		049F8CD527589BA300C448E2 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		049F8CD627589BA300C448E2 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		049F8CD727589BA300C448E2 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		04F7C10B275B72B20023B427 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		04F7C10D275B7B560023B427 /* ItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellViewModel.swift; sourceTree = "<group>"; };
+		04F7C10F275B7D130023B427 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F7C113275B83CB0023B427 /* AwesomeToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,11 +77,12 @@
 		043D084F2754AB7900EB7BA3 /* ReminderCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				043D086B2754B1EC00EB7BA3 /* Model */,
+				043D086C2754B24300EB7BA3 /* View */,
+				043D086D2754B24B00EB7BA3 /* ViewModel */,
 				043D08502754AB7900EB7BA3 /* ReminderCoreDataApp.swift */,
 				043D08522754AB7900EB7BA3 /* ContentView.swift */,
 				043D08542754AB7D00EB7BA3 /* Assets.xcassets */,
-				043D08592754AB7D00EB7BA3 /* Persistence.swift */,
-				043D085B2754AB7D00EB7BA3 /* ReminderCoreData.xcdatamodeld */,
 				043D08562754AB7D00EB7BA3 /* Preview Content */,
 			);
 			path = ReminderCoreData;
@@ -71,6 +94,39 @@
 				043D08572754AB7D00EB7BA3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		043D086B2754B1EC00EB7BA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				043D08592754AB7D00EB7BA3 /* Persistence.swift */,
+				043D085B2754AB7D00EB7BA3 /* ReminderCoreData.xcdatamodeld */,
+				049F8CD427589BA300C448E2 /* Category+CoreDataClass.swift */,
+				049F8CD527589BA300C448E2 /* Category+CoreDataProperties.swift */,
+				049F8CD627589BA300C448E2 /* Item+CoreDataClass.swift */,
+				049F8CD727589BA300C448E2 /* Item+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		043D086C2754B24300EB7BA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				049F8CC827588B0400C448E2 /* CategoryListView.swift */,
+				049F8CCA27588DE700C448E2 /* AlertView.swift */,
+				04F7C10B275B72B20023B427 /* ItemListView.swift */,
+				04F7C10F275B7D130023B427 /* ItemCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		043D086D2754B24B00EB7BA3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				043D086E2754B28800EB7BA3 /* ReminderViewModel.swift */,
+				04F7C10D275B7B560023B427 /* ItemCellViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +145,9 @@
 			dependencies = (
 			);
 			name = ReminderCoreData;
+			packageProductDependencies = (
+				04F7C112275B83CB0023B427 /* AwesomeToast */,
+			);
 			productName = ReminderCoreData;
 			productReference = 043D084D2754AB7900EB7BA3 /* ReminderCoreData.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +176,9 @@
 				Base,
 			);
 			mainGroup = 043D08442754AB7800EB7BA3;
+			packageReferences = (
+				04F7C111275B83CA0023B427 /* XCRemoteSwiftPackageReference "AwesomeToastPackage" */,
+			);
 			productRefGroup = 043D084E2754AB7900EB7BA3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,9 +205,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049F8CDA27589BA300C448E2 /* Item+CoreDataClass.swift in Sources */,
 				043D085A2754AB7D00EB7BA3 /* Persistence.swift in Sources */,
+				049F8CD927589BA300C448E2 /* Category+CoreDataProperties.swift in Sources */,
+				049F8CD827589BA300C448E2 /* Category+CoreDataClass.swift in Sources */,
+				04F7C110275B7D130023B427 /* ItemCell.swift in Sources */,
+				04F7C10E275B7B560023B427 /* ItemCellViewModel.swift in Sources */,
+				049F8CCB27588DE700C448E2 /* AlertView.swift in Sources */,
+				043D086F2754B28800EB7BA3 /* ReminderViewModel.swift in Sources */,
 				043D08532754AB7900EB7BA3 /* ContentView.swift in Sources */,
+				04F7C10C275B72B20023B427 /* ItemListView.swift in Sources */,
 				043D085D2754AB7D00EB7BA3 /* ReminderCoreData.xcdatamodeld in Sources */,
+				049F8CC927588B0400C448E2 /* CategoryListView.swift in Sources */,
+				049F8CDB27589BA300C448E2 /* Item+CoreDataProperties.swift in Sources */,
 				043D08512754AB7900EB7BA3 /* ReminderCoreDataApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +423,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04F7C111275B83CA0023B427 /* XCRemoteSwiftPackageReference "AwesomeToastPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/manasdevslopes/AwesomeToastPackage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04F7C112275B83CB0023B427 /* AwesomeToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04F7C111275B83CA0023B427 /* XCRemoteSwiftPackageReference "AwesomeToastPackage" */;
+			productName = AwesomeToast;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		043D085B2754AB7D00EB7BA3 /* ReminderCoreData.xcdatamodeld */ = {
