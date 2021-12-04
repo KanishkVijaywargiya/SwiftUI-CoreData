@@ -84,6 +84,18 @@ extension ReminderViewModel {
         }
         return false
     }
+    
+    func itemCount(_ category: Category) -> Int {
+        let request: NSFetchRequest<Item> = Item.fetchRequest()
+        request.predicate = NSPredicate(format: "%K = %@", #keyPath(Item.category), category)
+        
+        do {
+            return try _context.fetch(request).count
+        } catch {
+            assertionFailure()
+        }
+        return 0
+    }
 }
 
 // MARK: ITEMS

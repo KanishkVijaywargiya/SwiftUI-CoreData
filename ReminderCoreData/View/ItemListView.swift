@@ -6,11 +6,30 @@
 //
 
 import SwiftUI
+import AwesomeToast
 
 struct ItemListView: View {
     @EnvironmentObject private var viewModel: ReminderViewModel
     @State private var showAddItem = false
+    @State private var showAlert = false
+    @State private var isHide: Bool = false
     private var _category: Category
+    
+    var results: [Item] {
+        if isHide {
+            return viewModel.items.filter({$0.completed != true})
+        } else {
+            return viewModel.items
+        }
+    }
+    
+    var disableToggle: Bool {
+        if (results.count == 0 || viewModel.items.filter({$0.completed == true }).count == 0) {
+            return true
+        } else {
+            return false
+        }
+    }
     
     init(category: Category) {
         self._category = category
@@ -19,7 +38,10 @@ struct ItemListView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             List {
-                ForEach(viewModel.items, id: \.id) { item in
+                Toggle("Hide Completed", isOn: $isHide)
+                    .disabled(disableToggle)
+                
+                ForEach(results, id: \.id) { item in
                     ItemCell(itemCellVM: ItemCellViewModel(viewModel: viewModel, item: item))
                 }
                 .onDelete(perform: self.removeRow)
@@ -54,12 +76,17 @@ struct ItemListView: View {
         .onAppear {
             viewModel.category = _category
         }
+        .showToast(title: "Delete Failed", "Remove Filter", isPresented: $showAlert, color: Color(#colorLiteral(red: 0.9374369979, green: 0.2989863157, blue: 0.3855088353, alpha: 1)), alignment: .bottom, image: Image(systemName: "flame.fill"))
     }
     
     private func removeRow(at offsets: IndexSet) {
-        for offset in offsets {
-            let item = viewModel.items[offset]
-            viewModel.deleteItem(item)
+        if !isHide {
+            for offset in offsets {
+                let item = viewModel.items[offset]
+                viewModel.deleteItem(item)
+            }
+        } else {
+            self.showAlert.toggle()
         }
     }
 }

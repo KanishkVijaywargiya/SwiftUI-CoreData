@@ -22,7 +22,7 @@ struct CategoryListView: View {
                     List {
                         ForEach(viewModel.categories, id: \.id) { category in
                             NavigationLink(destination: ItemListView(category: category)) {
-                                Text(category.name)
+                                Text("\(category.name) - \(viewModel.itemCount(category))")
                             }
                         }
                         .onDelete (perform: self.removeRow)
